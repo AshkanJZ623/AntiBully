@@ -1,0 +1,1 @@
+python train.py -bs=32 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset= [dataset]
