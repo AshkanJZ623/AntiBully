@@ -2,7 +2,7 @@ OLID_PATH = './OLIDv1.0'
 GERMEVAL_PATH = './GermEval2018'
 PERSIAN_PATH  = './Persian'
 SAVE_PATH = './save'
-KIDS_PATH = '/content/AntiBully/dataset'
+KIDS_PATH = './dataset'
 
 LABEL_DICT_OLID = dict()
 LABEL_DICT_GERMEVAL = dict()

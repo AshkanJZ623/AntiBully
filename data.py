@@ -286,7 +286,7 @@ def read_test_file(task, tokenizer, truncate=512, data='en'):
         nums = len(df1)
 
     elif data == 'train_kids_test_kids':
-        test_filepath = 'C:/Users/Ashkan_JZ/Desktop/LAST/dataset/testset-levela.tsv'
+        test_filepath = '/content/AntiBully/dataset/testset-levela.tsv'
 
         
         dftest = pd.read_csv(test_filepath)
