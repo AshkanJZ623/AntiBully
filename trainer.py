@@ -89,6 +89,20 @@ class Trainer():
             log += '=' * 20 + '\n'
             save_log(log)
             print(log)
+            
+                ################################################################################################################
+
+
+        #This is added by Ashkan to save the checkpoint on the google colab. SO that we can resume tarining afterwards
+            torch.save({
+            'epoch': epoch,
+            'model_state_dict': self.model.state_dict(),
+            'optimizer_state_dict': self.optimizer.state_dict(),
+            'loss': self.train_losses[-1],
+            'accuracy': self.train_f1[-1],
+        }, '/content/drive/MyDrive/checkpoint.pth')
+            
+        ################################################################################################################
 
         print('Saving results ...')
         save(
