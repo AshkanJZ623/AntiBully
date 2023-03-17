@@ -100,7 +100,7 @@ class Trainer():
             'optimizer_state_dict': self.optimizer.state_dict(),
             'loss': self.train_losses[-1],
             'accuracy': self.train_f1[-1],
-        }, '/content/drive/MyDrive/checkpoint.pth')
+        }, '/content/drive/MyDrive/checkpoint.pth',map_location=torch.device('cuda'))
             
         ################################################################################################################
 
