@@ -101,8 +101,7 @@ class Trainer():
             'loss': self.train_losses[-1],
             'accuracy': self.train_f1[-1],
         }, '/content/drive/MyDrive/checkpoint.pth')
-            model.cpu()
-            optimizer.cpu()
+            
             
         ################################################################################################################
 
