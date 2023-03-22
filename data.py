@@ -86,7 +86,7 @@ def read_file(filepath: str, data='en'):
 
     elif data=='train_kids_test_kids':
 
-        df = pd.read_csv(filepath,encoding='ISO-8859-1')
+        df = pd.read_csv(filepath)
 
         ids = np.array(df[ID_LABEL].values)
         tweets = np.array(df[TWEET_LABEL].values)
