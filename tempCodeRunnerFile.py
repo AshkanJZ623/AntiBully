@@ -1,1 +1,0 @@
-python -u "c:\Users\Ashkan_JZ\Desktop\AntiBully\train.py" -bs=16 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset=train_kids_test_kids
