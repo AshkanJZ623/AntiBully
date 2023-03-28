@@ -1,8 +1,19 @@
-OLID_PATH = '/content/AntiBully/OLIDv1.0'
+OLID_PATH = './OLIDv1.0'
 GERMEVAL_PATH = './GermEval2018'
 PERSIAN_PATH  = './Persian'
 SAVE_PATH = './save'
-KIDS_PATH = '/content/AntiBully/dataset'
+
+'''
+COLAB: /content/drive/MyDrive/checkpoint.pth'
+'''
+CHECKPOINT_SAVE_PATH = input("Enter the location that you want to save the checkpoint: ")
+'''
+LOCALHOST: ./dataset
+COLAB: /content/AntiBully/dataset,
+KAGGLE: /kaggle/working/AntiBully/dataset)
+'''
+KIDS_PATH = input("Enter the path to the train and test datasets folder: ")
+
 
 LABEL_DICT_OLID = dict()
 LABEL_DICT_GERMEVAL = dict()

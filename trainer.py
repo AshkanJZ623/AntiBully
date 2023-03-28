@@ -13,6 +13,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, multilabel
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import itertools
+from config import CHECKPOINT_SAVE_PATH
 # Local files
 from utils import save, save_hugging_face, save_image, save_log, save_text
 from datasets import LABEL_DICT
@@ -89,18 +90,17 @@ class Trainer():
             log += '=' * 20 + '\n'
             save_log(log)
             print(log)
-            
-                ################################################################################################################
 
+        ################################################################################################################
+        #This part is added by Ashkan to save the checkpoints
 
-        #This is added by Ashkan to save the checkpoint on the google colab. SO that we can resume tarining afterwards
             torch.save({
             'epoch': epoch,
             'model_state_dict': self.model.state_dict(),
             'optimizer_state_dict': self.optimizer.state_dict(),
             'loss': self.train_losses[-1],
             'accuracy': self.train_f1[-1],
-        }, '/content/drive/MyDrive/checkpoint.pth')
+            },CHECKPOINT_SAVE_PATH)
             
             
         ################################################################################################################

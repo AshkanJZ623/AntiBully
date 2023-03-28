@@ -1,10 +1,10 @@
-'''
-Train single-task model for subtask-A
-python train.py -bs=32 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset= [dataset]
+#Train single-task model for subtask-A
+# python -u "c:\Users\Ashkan_JZ\Desktop\AntiBully\train.py" -bs=16 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset=train_kids_test_kids
 
-Train multi-task model
-python train.py -bs=32 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=all --clip --loss-weights 0.4 0.3 0.3 --cuda=1 --dataset= [dataset]
-'''
+#Train multi-task model
+#python train.py -bs=32 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=all --clip --loss-weights 0.4 0.3 0.3 --cuda=1 --dataset= [dataset]
+
+
 from ast import arg
 import os
 from unittest.util import _MAX_LENGTH
@@ -70,7 +70,9 @@ if __name__ == '__main__':
 
     # Set device
     os.environ["CUDA_VISIBLE_DEVICES"] = args['cuda']
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 
     # Create related dict
     make_dict(TRAIN_PATH, dataset)
