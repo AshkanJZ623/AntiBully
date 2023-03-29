@@ -34,12 +34,27 @@ def save_image(filename):
         os.makedirs(dirname)    
     plt.savefig(filename)
 
+# def save(toBeSaved, filename, mode='wb'):
+#     dirname = os.path.dirname(filename)
+#     if not os.path.exists(dirname):
+#         os.makedirs(dirname)
+#     with open(filename, mode) as file:
+#         pickle.dump(toBeSaved, file)
+
+# def save(toBeSaved, filename, mode='wb'):
+#     dirname = os.path.dirname(filename)
+#     if not os.path.exists(dirname):
+#         os.makedirs(dirname)
+#     with open(filename, mode) as file:
+#         pickle.dump(toBeSaved, file)
+
 def save(toBeSaved, filename, mode='wb'):
     dirname = os.path.dirname(filename)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     with open(filename, mode) as file:
-        pickle.dump(toBeSaved, file)
+        torch.save(toBeSaved, file)
+
 
 def save_hugging_face(model, dirname):
     if not os.path.exists(dirname):

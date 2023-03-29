@@ -2,15 +2,13 @@ import os
 import pandas as pd
 import numpy as np
 import emoji
-
 import wordsegment
+import re
 from parsivar import Normalizer
-
 from config import OLID_PATH, GERMEVAL_PATH, PERSIAN_PATH, KIDS_PATH
 from config import TWEET_LABEL, TASK_A_LABEL, TASK_B_LABEL, TASK_C_LABEL, ID_LABEL, TASKS
 from utils import pad_sents, get_mask, get_lens
 from datasets import LABEL_DICT, get_labels
-import re
 
 
 my_normalizer = Normalizer()

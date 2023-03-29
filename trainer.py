@@ -13,9 +13,10 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, multilabel
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import itertools
-from config import CHECKPOINT_SAVE_PATH
+# from config import CHECKPOINT_SAVE_PATH
 # Local files
 from utils import save, save_hugging_face, save_image, save_log, save_text
+from config import *
 from datasets import LABEL_DICT
 # from config import LABEL_DICT_OLID
 
@@ -94,22 +95,32 @@ class Trainer():
         ################################################################################################################
         #This part is added by Ashkan to save the checkpoints
 
-            torch.save({
-            'epoch': epoch,
-            'model_state_dict': self.model.state_dict(),
-            'optimizer_state_dict': self.optimizer.state_dict(),
-            'loss': self.train_losses[-1],
-            'accuracy': self.train_f1[-1],
-            },CHECKPOINT_SAVE_PATH)
+            # torch.save({
+            # 'epoch': epoch,
+            # 'model_state_dict': self.model.state_dict(),
+            # 'optimizer_state_dict': self.optimizer.state_dict(),
+            # 'loss': self.train_losses[-1],
+            # 'accuracy': self.train_f1[-1],
+            # },CHECKPOINT_SAVE_PATH)
             
             
         ################################################################################################################
 
         print('Saving results ...')
+
+        # save(
+        #     (self.train_losses, self.test_losses, self.train_f1, self.test_f1, self.best_train_f1, self.best_test_f1),
+        #     f'./save/results/single_{self.task_name}_{self.datetimestr}_{self.best_test_f1:.4f}.pt'
+        # )
+        
+        # print(torch.__version__)
+
         save(
             (self.train_losses, self.test_losses, self.train_f1, self.test_f1, self.best_train_f1, self.best_test_f1),
-            f'./save/results/single_{self.task_name}_{self.datetimestr}_{self.best_test_f1:.4f}.pt'
+            SAVE_PT_RESULT_PATH 
         )
+
+        # print('Your results are now saved, enjoy!')
 
     def train_one_epoch(self):
         self.model.train()
@@ -261,12 +272,17 @@ class Trainer():
 
     def save_model(self):
         print('Saving model...')
-        if self.task_name == 'all':
-            filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1_m[0]}_seed{self.seed}.pt'
-        else:
-            filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1}_seed{self.seed}.pt'
-        dirname = f'./save/models'
-        save_hugging_face(self.model, dirname)
+        # if self.task_name == 'all':
+        #     # filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1_m[0]}_seed{self.seed}.pt'
+
+        #     # filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1}_seed{self.seed}.pt'
+        #     filename = 'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results/kidstrainresults.pt'
+
+        # else:
+        #     # filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1}_seed{self.seed}.pt'
+        #     filename = 'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results/kidstrainresults.pt'
+        # dirname = f'./save/models'
+        save_hugging_face(self.model, 'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results')
         # save(copy.deepcopy(self.model.state_dict()), filename)
 
     def plot_losses(self):

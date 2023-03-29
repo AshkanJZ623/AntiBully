@@ -1,9 +1,8 @@
 #Train single-task model for subtask-A
-# python -u "c:\Users\Ashkan_JZ\Desktop\AntiBully\train.py" -bs=16 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset=train_kids_test_kids
+#python -u "c:\Users\Ashkan_JZ\Desktop\AntiBully\train.py" -bs=16 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=a --clip --cuda=1 --dataset=train_kids_test_kids
 
 #Train multi-task model
 #python train.py -bs=32 -lr=3e-6 -ep=4 -pa=3 --model=bert --task=all --clip --loss-weights 0.4 0.3 0.3 --cuda=1 --dataset= [dataset]
-
 
 from ast import arg
 import os
@@ -27,7 +26,7 @@ DATASET_DICT = {
     'train_de_test_de': 'germeval2018.training.txt',
     'train_de_test_en': 'germeval2018.training.txt',
     'train_fa_test_fa': 'persian_train.xlsx',
-    'train_kids_test_kids': 'kidstrain.tsv',
+    'train_kids_test_kids': 'kidstrain.csv',
     'train_ende_test_en': "dummy",
     'train_ende_test_de': "dummy",
     'train_ende_test_ende': "dummy"
@@ -219,5 +218,6 @@ if __name__ == '__main__':
 
     if task in TASKS:
         trainer.train()
+        trainer.save_model()
     else:
         trainer.train_m()

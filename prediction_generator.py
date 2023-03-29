@@ -1,6 +1,7 @@
 ## Thsi is for generate the test prediction labels from model
 
 import os
+import csv
 import numpy as np
 import pandas as pd
 import torch
@@ -11,7 +12,6 @@ from data import process_tweets, get_mask, get_lens, pad_sents
 from cli import get_args
 from utils import load
 from tqdm import tqdm
-import csv
 # from utils import get_loss_weight
 # from datasets import HuggingfaceDataset, HuggingfaceMTDataset, ImbalancedDatasetSampler
 from models.bert import BERT, RoBERTa, XLM_RoBERTa
@@ -152,23 +152,5 @@ if __name__ == '__main__':
         writer = csv.writer(csvfile, lineterminator='\n')
         writer.writerow(['id', 'tweet'])
         writer.writerows(lines)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -6,7 +6,7 @@ SAVE_PATH = './save'
 '''
 COLAB: /content/drive/MyDrive/checkpoint.pth'
 '''
-CHECKPOINT_SAVE_PATH = input("Enter the location that you want to save the checkpoint: ")
+# CHECKPOINT_SAVE_PATH = input("Enter the location that you want to save the checkpoint: ")
 '''
 LOCALHOST: ./dataset
 COLAB: /content/AntiBully/dataset,
@@ -14,6 +14,18 @@ KAGGLE: /kaggle/working/AntiBully/dataset)
 '''
 KIDS_PATH = input("Enter the path to the train and test datasets folder: ")
 
+
+SAVE_PT_RESULT_PATH = input("Enter the .pt result path savefile: ")
+
+'''
+C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results/kidstrainresults.pt
+'''
+
+SAVE_MODEL_PATH = input("Enter the huggingface model path savefile: ")
+
+'''
+'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results'
+'''
 
 LABEL_DICT_OLID = dict()
 LABEL_DICT_GERMEVAL = dict()
