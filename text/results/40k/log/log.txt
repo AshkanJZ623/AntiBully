@@ -1,0 +1,85 @@
+Epoch 1
+====================
+Train loss = 0.3165
+Train Macro-F1 = 0.8658
+              precision    recall  f1-score   support
+
+         NOT       0.87      0.90      0.89      2500
+         OFF       0.90      0.86      0.88      2500
+
+    accuracy                           0.88      5000
+   macro avg       0.89      0.88      0.88      5000
+weighted avg       0.89      0.88      0.88      5000
+
+Test loss = 0.2878
+Test Macro-F1 = 0.8848
+Best test f1: 0.8848
+====================
+Epoch 2
+====================
+Train loss = 0.2367
+Train Macro-F1 = 0.9020
+              precision    recall  f1-score   support
+
+         NOT       0.88      0.90      0.89      2500
+         OFF       0.90      0.88      0.89      2500
+
+    accuracy                           0.89      5000
+   macro avg       0.89      0.89      0.89      5000
+weighted avg       0.89      0.89      0.89      5000
+
+Test loss = 0.2760
+Test Macro-F1 = 0.8880
+Best test f1: 0.8880
+====================
+Epoch 3
+====================
+Train loss = 0.2035
+Train Macro-F1 = 0.9177
+              precision    recall  f1-score   support
+
+         NOT       0.90      0.86      0.88      2500
+         OFF       0.87      0.90      0.89      2500
+
+    accuracy                           0.88      5000
+   macro avg       0.88      0.88      0.88      5000
+weighted avg       0.88      0.88      0.88      5000
+
+Test loss = 0.2912
+Test Macro-F1 = 0.8832
+Best test f1: 0.8880
+====================
+Epoch 4
+====================
+Train loss = 0.1750
+Train Macro-F1 = 0.9320
+              precision    recall  f1-score   support
+
+         NOT       0.89      0.88      0.89      2500
+         OFF       0.88      0.89      0.89      2500
+
+    accuracy                           0.89      5000
+   macro avg       0.89      0.89      0.89      5000
+weighted avg       0.89      0.89      0.89      5000
+
+Test loss = 0.3114
+Test Macro-F1 = 0.8870
+Best test f1: 0.8880
+====================
+Epoch 5
+====================
+Train loss = 0.1422
+Train Macro-F1 = 0.9462
+              precision    recall  f1-score   support
+
+         NOT       0.89      0.88      0.89      2500
+         OFF       0.88      0.89      0.89      2500
+
+    accuracy                           0.89      5000
+   macro avg       0.89      0.89      0.89      5000
+weighted avg       0.89      0.89      0.89      5000
+
+Test loss = 0.3349
+Test Macro-F1 = 0.8858
+Best test f1: 0.8880
+====================
