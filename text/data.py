@@ -274,7 +274,7 @@ def read_file(filepath: str, data='en'):
 
     return nums, ids, tweets, label_a, label_b, label_c
 
-def read_test_file(task, tokenizer, truncate=512, data='en'):
+def read_test_file(task, tokenizer, truncate=128, data='en'):
     if data == 'train_en_test_en':
         df1 = pd.read_csv(os.path.join(DATASET_PATH[data], 'testset-level' + task + '.tsv'), sep='\t')
         df2 = pd.read_csv(os.path.join(DATASET_PATH[data], 'labels-level' + task + '.csv'), sep=',')
@@ -539,7 +539,7 @@ def segment_hashtag(sents):
     return sents
 
 
-def task_a(filepath: str, tokenizer, truncate=512, data='en'):
+def task_a(filepath: str, tokenizer, truncate=128, data='en'):
     nums, ids, tweets, label_a, _, _ = read_file(filepath, data=data)
     # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     token_ids = [tokenizer.encode(text=tweets[i], add_special_tokens=True, max_length=truncate, truncation=True) for i in range(nums)]
