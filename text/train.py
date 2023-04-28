@@ -103,7 +103,7 @@ if __name__ == '__main__':
         print(f'using xlm-roberta-{model_size} model.')
         model = XLM_RoBERTa(model_size, args=args, num_labels=num_labels)
         tokenizer = XLMRobertaTokenizer.from_pretrained(f'xlm-roberta-base')
-        save_tokenizer(tokenizer, './save/tokenizer')
+#         save_tokenizer(tokenizer, './save/tokenizer')
         assert tokenizer != None
     elif model_name == 'pars-bert':
         print(f'using bert-{model_size}-parsbert-uncased.')
