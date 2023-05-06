@@ -1,4 +1,4 @@
-OLID_PATH = './OLIDv1.0'
+OLID_PATH = './text/OLIDv1.0'
 GERMEVAL_PATH = './GermEval2018'
 PERSIAN_PATH  = './Persian'
 SAVE_PATH = './save'
