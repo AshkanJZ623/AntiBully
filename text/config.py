@@ -12,16 +12,16 @@ LOCALHOST: ./dataset
 COLAB: /content/AntiBully/dataset,
 KAGGLE: /kaggle/working/AntiBully/dataset)
 '''
-# KIDS_PATH = input("Enter the path to the train and test datasets folder: ")
+KIDS_PATH = input("Enter the path to the train and test datasets folder: ")
 
 
-# SAVE_PT_RESULT_PATH = input("Enter the .pt result path savefile: ")
+SAVE_PT_RESULT_PATH = input("Enter the .pt result path savefile: ")
 
 '''
 C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results/kidstrainresults.pt
 '''
 
-# SAVE_MODEL_PATH = input("Enter the huggingface model path savefile: ")
+SAVE_MODEL_PATH = input("Enter the huggingface model path savefile: ")
 
 '''
 'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results'
