@@ -115,10 +115,10 @@ class Trainer():
         
         # print(torch.__version__)
 
-        save(
-            (self.train_losses, self.test_losses, self.train_f1, self.test_f1, self.best_train_f1, self.best_test_f1),
-            SAVE_PT_RESULT_PATH 
-        )
+        # save(
+        #     (self.train_losses, self.test_losses, self.train_f1, self.test_f1, self.best_train_f1, self.best_test_f1),
+        #     SAVE_PT_RESULT_PATH 
+        # )
 
         # print('Your results are now saved, enjoy!')
 
