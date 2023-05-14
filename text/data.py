@@ -290,7 +290,7 @@ def read_test_file(task, tokenizer, truncate=128, data='en'):
         COLAB:  /content/AntiBully/dataset/testset-levela.tsv
         KAGGLE: /kaggle/working/AntiBully/dataset/testset-levela.tsv
         '''
-        test_filepath = input("Enter the path and the name of the testset: ")
+        test_filepath = './test.csv'
         dftest = pd.read_csv(test_filepath)
         ids = np.array(dftest['id'].values)
         tweets = np.array(dftest['tweet'].values)

@@ -282,7 +282,7 @@ class Trainer():
         #     # filename = f'./save/models/{self.task_name}_{self.model_name}_{self.best_test_f1}_seed{self.seed}.pt'
         #     filename = 'C:/Users/Ashkan_JZ/Desktop/AntiBully/save/results/kidstrainresults.pt'
         # dirname = f'./save/models'
-        save_hugging_face(self.model, '/content/drive/MyDrive')
+        save_hugging_face(self.model, './')
         # save(copy.deepcopy(self.model.state_dict()), filename)
 
     def plot_losses(self):
