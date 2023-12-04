@@ -1,0 +1,1 @@
+# Hatefull Meme Classifier, dependencies in the dependencies path
